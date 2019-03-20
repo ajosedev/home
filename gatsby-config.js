@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `ajosedev | TIL`,
+    title: `ajosedev | full stack dev`,
     author: `Andrew Jose`,
-    description: `Tidbits of things I've learned recently`,
-    siteUrl: `https://ajose.dev/til/`,
+    description: `Full stack developer`,
+    siteUrl: `https://ajose.dev/`,
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/til`,
+        name: `til`,
       },
     },
     {

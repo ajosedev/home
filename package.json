@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "ajosedev-home",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A place for me to host random stuff: links, labs, snippets",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Andrew Jose <ajosedev@gmail.com>",
   "dependencies": {
     "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.33",
@@ -38,7 +35,7 @@
   "devDependencies": {
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://ajose.dev",
   "keywords": [
     "gatsby"
   ],
@@ -46,7 +43,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/ajosedev/home.git"
   },
   "scripts": {
     "build": "gatsby build",
