@@ -11,7 +11,6 @@ class Index extends React.Component {
     return (
       <div>
         <SEO
-          title=""
           keywords={[`ajosedev`, `Andrew Jose`, `javascript`, `react`, `webdev`]}
         />
         <main>
