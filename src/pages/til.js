@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
-import Layout from '../components/layout';
+import BlogLayout from '../components/blogLayout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
@@ -12,7 +12,7 @@ class TIL extends React.Component {
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <Layout location={this.props.location} title="Today I Learned">
+      <BlogLayout location={this.props.location} title="Today I Learned">
         <SEO
           title="TIL"
           keywords={[`blog`, `javascript`, `react`, `webdev`]}
@@ -40,7 +40,7 @@ class TIL extends React.Component {
             </div>
           );
         })}
-      </Layout>
+      </BlogLayout>
     );
   }
 }
@@ -64,7 +64,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
+            # description
           }
         }
       }
