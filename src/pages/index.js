@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 // import Bio from '../components/bio';
 // import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import { rhythm } from '../utils/typography';
+import styles from '../styles/index.modules.css';
 
 class Index extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Index extends React.Component {
         <SEO
           keywords={[`ajosedev`, `Andrew Jose`, `javascript`, `react`, `webdev`]}
         />
-        <main>
+        <main style={styles.main}>
           <div className="grid">
             <header>
               <h1>Andrew Jose</h1>
@@ -23,9 +23,11 @@ class Index extends React.Component {
                 <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
               </div>
             </header>
-            <p>Web</p>
-            <p>Software</p>
-            <p>Games</p>
+            <div className="types">
+              <p>Web</p>
+              <p>Software</p>
+              <p>Games</p>
+            </div>
             <p className="developer">Developer</p>
           </div>
         </main>

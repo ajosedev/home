@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ajosedev | full stack dev`,
+    title: `Andrew Jose | full stack dev`,
     author: `Andrew Jose`,
     description: `Full stack developer`,
     siteUrl: `https://ajose.dev/`,
@@ -49,19 +49,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `ajosedev | TIL`,
-        short_name: `ajosedev | TIL`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        // icon: `content/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
