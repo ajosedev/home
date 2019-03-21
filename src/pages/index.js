@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 // import Bio from '../components/bio';
 // import Layout from '../components/layout';
@@ -18,9 +18,10 @@ class Index extends React.Component {
             <header>
               <h1>Andrew Jose</h1>
               <ul className="links">
-                <li href="https://github.com/ajosedev">GitHub</li>
-                <li href="https://codepen.io/ajosedev/">CodePen</li>
-                <li href="https://www.linkedin.com/in/ajosedev/">LinkedIn</li>
+                <li><a href="https://github.com/ajosedev">GitHub</a></li>
+                <li><a href="https://codepen.io/ajosedev/">CodePen</a></li>
+                <li><a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a></li>
+                <li><Link to={`/til`}>TIL</Link></li>
               </ul>
             </header>
             <ul className="types">
