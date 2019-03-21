@@ -26,7 +26,6 @@ header h1 {
   padding-bottom: .2rem;
   text-align: center;
 }
-/* TODO - display flex this */
 .links {
   text-align: center;
 }
@@ -59,10 +58,9 @@ header h1 {
     border-left: .35rem solid #325F8A;
   }
 }
-/* TODO - improve this, maybe use em for padding and set a base font-size with rem */
 @media (max-width: 25rem) {
   header h1 {
-    font-size: calc(1.7rem + 2vw);
+    font-size: calc(1.5rem + 2vw);
   }
   .grid {
     grid-template-columns: 1fr;
