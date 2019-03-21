@@ -24,26 +24,29 @@ header h1 {
   color: #CDA34F;
   font-size: 2.8rem;
   padding-bottom: .2rem;
-  text-align: right;
+  text-align: center;
 }
 /* TODO - display flex this */
 .links {
   text-align: center;
 }
-.links a + a {
+.links li {
+  display: inline-block;
+}
+.links li + li {
   margin-left: 1rem;
 }
-.types p {
+.types li {
   font-size: 1.6rem;
 }
 .developer {
   font-size: 2.4rem;
 }
 @media (min-width: 25rem) {
-  .links {
+  .links, header h1 {
     text-align: right;
   }
-  .types p {
+  .types li {
     grid-column: 1;
     padding-right: .4rem;
     text-align: right;
@@ -59,7 +62,7 @@ header h1 {
 /* TODO - improve this, maybe use em for padding and set a base font-size with rem */
 @media (max-width: 25rem) {
   header h1 {
-    font-size: calc(1.8rem + 2vw);
+    font-size: calc(1.7rem + 2vw);
   }
   .grid {
     grid-template-columns: 1fr;

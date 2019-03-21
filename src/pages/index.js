@@ -17,17 +17,17 @@ class Index extends React.Component {
           <div className="grid">
             <header>
               <h1>Andrew Jose</h1>
-              <div className="links">
-                <a href="https://github.com/ajosedev">GitHub</a>
-                <a href="https://codepen.io/ajosedev/">CodePen</a>
-                <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
-              </div>
+              <ul className="links">
+                <li href="https://github.com/ajosedev">GitHub</li>
+                <li href="https://codepen.io/ajosedev/">CodePen</li>
+                <li href="https://www.linkedin.com/in/ajosedev/">LinkedIn</li>
+              </ul>
             </header>
-            <div className="types">
-              <p>Web</p>
-              <p>Software</p>
-              <p>Games</p>
-            </div>
+            <ul className="types">
+              <li>Web</li>
+              <li>Software</li>
+              <li>Games</li>
+            </ul>
             <p className="developer">Developer</p>
           </div>
         </main>
