@@ -12,10 +12,7 @@ class TIL extends React.Component {
 
     return (
       <BlogLayout location={this.props.location} title="Today I Learned">
-        <SEO
-          title="TIL"
-          keywords={[`blog`, `javascript`, `react`, `webdev`]}
-        />
+        <SEO title="TIL" keywords={[`blog`, `javascript`, `react`, `webdev`]} />
         {posts.map(({ node }) => (
           <BlogExcerpt
             key={node.fields.slug}

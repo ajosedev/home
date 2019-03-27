@@ -9,17 +9,31 @@ class Index extends React.Component {
     return (
       <div>
         <SEO
-          keywords={[`ajosedev`, `Andrew Jose`, `javascript`, `react`, `webdev`]}
+          keywords={[
+            `ajosedev`,
+            `Andrew Jose`,
+            `javascript`,
+            `react`,
+            `webdev`,
+          ]}
         />
         <main style={styles.main}>
           <div className="grid">
             <header>
               <h1>Andrew Jose</h1>
               <ul className="links">
-                <li><a href="https://github.com/ajosedev">GitHub</a></li>
-                <li><a href="https://codepen.io/ajosedev/">CodePen</a></li>
-                <li><a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a></li>
-                <li><Link to={`/til`}>TIL</Link></li>
+                <li>
+                  <a href="https://github.com/ajosedev">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/ajosedev/">CodePen</a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
+                </li>
+                <li>
+                  <Link to={`/til`}>TIL</Link>
+                </li>
               </ul>
             </header>
             <ul className="types">
