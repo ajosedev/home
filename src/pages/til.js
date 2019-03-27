@@ -15,7 +15,6 @@ class TIL extends React.Component {
           title="TIL"
           keywords={[`blog`, `javascript`, `react`, `webdev`]}
         />
-        {/* <Bio /> */}
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
