@@ -4,9 +4,11 @@ import { Link } from 'gatsby';
 
 const BlogExcerpt = props => (
   <article>
-    <h3>
-      <Link to={props.link}>{props.title}</Link>
-    </h3>
+    <header>
+      <h3>
+        <Link to={props.link}>{props.title}</Link>
+      </h3>
+    </header>
     <small>{props.date}</small>
     <p
       dangerouslySetInnerHTML={{
