@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
-// import Bio from '../components/bio';
-// import Layout from '../components/layout';
 import SEO from '../components/seo';
 import styles from '../styles/index.modules.css';
 
@@ -38,13 +36,3 @@ class Index extends React.Component {
 }
 
 export default Index;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

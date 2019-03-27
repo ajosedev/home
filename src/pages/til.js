@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import BlogLayout from '../components/blogLayout';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
 
 class TIL extends React.Component {
   render() {
@@ -17,17 +15,13 @@ class TIL extends React.Component {
           title="TIL"
           keywords={[`blog`, `javascript`, `react`, `webdev`]}
         />
-        <Bio />
+        {/* <Bio /> */}
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <h3>
+                <Link to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
