@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import BlogLayout from '../components/blogLayout';
 import SEO from '../components/seo';
 
+// TODO - why is this in /templates and not /pages?
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
@@ -23,7 +23,6 @@ class BlogPostTemplate extends React.Component {
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
-        <Bio />
 
         <ul>
           <li>

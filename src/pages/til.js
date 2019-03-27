@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
+import BlogExcerpt from '../components/blogExcerpt';
 import BlogLayout from '../components/blogLayout';
 import SEO from '../components/seo';
 
@@ -15,24 +16,15 @@ class TIL extends React.Component {
           title="TIL"
           keywords={[`blog`, `javascript`, `react`, `webdev`]}
         />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          );
-        })}
+        {posts.map(({ node }) => (
+          <BlogExcerpt
+            key={node.fields.slug}
+            content={node.frontmatter.description || node.excerpt}
+            date={node.frontmatter.date}
+            link={node.fields.slug}
+            title={node.frontmatter.title || node.fields.slug}
+          />
+        ))}
       </BlogLayout>
     );
   }
