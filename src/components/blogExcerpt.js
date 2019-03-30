@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import { css } from '@emotion/core';
+
+const styles = css`
+  h2 a {
+    color: #325F8A;
+    font-weight: bold;
+  }
+`;
 
 const BlogExcerpt = props => (
-  <article>
+  <article css={styles}>
     <header>
-      <h3>
+      <h2>
         <Link to={props.link}>{props.title}</Link>
-      </h3>
+      </h2>
     </header>
     <small>{props.date}</small>
     <p

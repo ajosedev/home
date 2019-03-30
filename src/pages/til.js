@@ -9,7 +9,7 @@ const TIL = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <BlogLayout location={this.props.location} title="Today I Learned">
+    <BlogLayout title="ajosedev | TIL" root>
       <SEO title="TIL" keywords={[`blog`, `javascript`, `react`, `webdev`]} />
       {posts.map(({ node }) => (
         <BlogExcerpt

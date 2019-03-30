@@ -1,25 +1,33 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { css } from '@emotion/core';
 
 import BlogLayout from '../components/blogLayout';
 import SEO from '../components/seo';
+
+const styles = css`
+  h2 {
+    color: #325F8A;
+    font-weight: bold;
+  }
+`;
 
 // TODO - why is this in /templates and not /pages?
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
+    // const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
 
     return (
-      <BlogLayout location={this.props.location} title={siteTitle}>
+      <BlogLayout title="ajosedev | TIL">
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
+        <article css={styles}>
           <header>
-            <h1>{post.frontmatter.title}</h1>
+            <h2>{post.frontmatter.title}</h2>
             <p>{post.frontmatter.date}</p>
           </header>
 
