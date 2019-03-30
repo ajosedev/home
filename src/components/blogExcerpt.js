@@ -4,10 +4,6 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 
 const styles = css`
-  h2 a {
-    color: #325F8A;
-    font-weight: bold;
-  }
 `;
 
 const BlogExcerpt = props => (

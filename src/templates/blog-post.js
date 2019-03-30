@@ -6,10 +6,6 @@ import BlogLayout from '../components/blogLayout';
 import SEO from '../components/seo';
 
 const styles = css`
-  h2 {
-    color: #325F8A;
-    font-weight: bold;
-  }
   footer ul {
     display: flex;
     justify-content: space-between;
