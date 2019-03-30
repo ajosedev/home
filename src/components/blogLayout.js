@@ -2,11 +2,16 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 
-// import styles from '../styles/blogLayout.modules.css';
-
 const styles = css`
   max-width: 60ch;
   margin: 0 auto;
+
+  h1 {
+    margin-bottom: 1.5em;
+  }
+  h1 a {
+    color: #CDA34F;
+  }
 `;
 
 const BlogLayout = ({ children, root, title }) => (

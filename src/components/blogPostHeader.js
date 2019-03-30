@@ -1,18 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-// import { css } from '@emotion/core';
+import styled from '@emotion/styled';
+
+const H2 = styled.h2`
+  margin-bottom: 0.3em;
+`;
+
+const Date = styled.p`
+  font-size: 0.8rem;
+  margin-bottom: 1em;
+`;
 
 const BlogPostHeader = props => (
   <header>
-    <h2>
+    <H2>
       {props.link ? (
         <Link to={props.link}>{props.title}</Link>
       ) : (
         props.title
       )}
-    </h2>
-    <p>{props.date}</p>
+    </H2>
+    <Date>{props.date}</Date>
   </header>
 );
 

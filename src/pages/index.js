@@ -97,7 +97,7 @@ const List = styled.li`
   display: inline-block;
 
   & + & {
-    margin-left: 1rem;
+    margin-left: 1em;
   }
 `;
 

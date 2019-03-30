@@ -1,19 +1,20 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import BlogLayout from '../components/blogLayout';
 import BlogPostHeader from '../components/blogPostHeader';
 import SEO from '../components/seo';
 
-const styles = css`
-  footer ul {
-    display: flex;
-    justify-content: space-between;
-  }
+const Footer = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  border-top: 1px solid #1b1d1d
 `;
 
-// TODO - why is this in /templates and not /pages?
+// TODO - why is this in /templates and not /components?
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
@@ -26,16 +27,15 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article css={styles}>
+        <article>
           <BlogPostHeader
             date={post.frontmatter.date}
             title={post.frontmatter.title}
           />
 
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
 
-          <footer>
+          <Footer>
             <ul>
               {previous && (
                 <li>
@@ -52,7 +52,7 @@ class BlogPostTemplate extends React.Component {
                 </li>
               )}
             </ul>
-          </footer>
+          </Footer>
         </article>
       </BlogLayout>
     );
