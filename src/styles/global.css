@@ -1,13 +1,12 @@
 html {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #E4E4E4;
+	background-color: #f1f1f1;
 }
 * {
   box-sizing: border-box;
 }
-
-html, a {
-  color: #414141;
+html {
+  color: #1b1d1d;
 }
 a {
   text-decoration: none;
