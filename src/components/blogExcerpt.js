@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import BlogPostHeader from '../components/blogPostHeader';
 
 const styles = css`
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 `;
 
 const BlogExcerpt = props => (

@@ -6,8 +6,8 @@ const styles = css`
   max-width: 60ch;
   margin: 0 auto;
 
-  h1 {
-    margin-bottom: 1.5em;
+  header {
+    margin-bottom: 2em;
   }
   h1 a {
     color: #CDA34F;
@@ -20,6 +20,7 @@ const BlogLayout = ({ children, root, title }) => (
       <h1>
         <Link to={root ? '/' : '/til'}>{title}</Link>
       </h1>
+      <p>A bunch of short bites of information that may help you (or me).</p>
     </header>
     <main>{children}</main>
   </div>
