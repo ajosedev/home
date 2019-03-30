@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import { css } from '@emotion/core';
 
 import BlogLayout from '../components/blogLayout';
+import BlogPostHeader from '../components/blogPostHeader';
 import SEO from '../components/seo';
 
 const styles = css`
@@ -26,10 +27,10 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article css={styles}>
-          <header>
-            <h2>{post.frontmatter.title}</h2>
-            <p>{post.frontmatter.date}</p>
-          </header>
+          <BlogPostHeader
+            date={post.frontmatter.date}
+            title={post.frontmatter.title}
+          />
 
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />

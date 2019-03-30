@@ -1,19 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import { css } from '@emotion/core';
 
-const styles = css`
-`;
+import BlogPostHeader from '../components/blogPostHeader';
 
 const BlogExcerpt = props => (
-  <article css={styles}>
-    <header>
-      <h2>
-        <Link to={props.link}>{props.title}</Link>
-      </h2>
-    </header>
-    <small>{props.date}</small>
+  <article>
+    <BlogPostHeader
+      date={props.date}
+      link={props.link}
+      title={props.title}
+    />
     <p
       dangerouslySetInnerHTML={{
         __html: props.content,
