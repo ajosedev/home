@@ -11,9 +11,10 @@ html {
 a {
   text-decoration: none;
   color: #325F8A;
+  transition: color 0.5s;
 }
 a:hover, a:focus {
-  color: #214260;
+  color: #193046;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
