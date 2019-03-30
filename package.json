@@ -32,6 +32,9 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "gatsby-plugin-emotion": "^4.0.6",
     "prettier": "^1.16.4"
   },
   "homepage": "https://ajose.dev",
