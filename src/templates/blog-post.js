@@ -10,6 +10,10 @@ const styles = css`
     color: #325F8A;
     font-weight: bold;
   }
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 // TODO - why is this in /templates and not /pages?
