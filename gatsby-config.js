@@ -54,6 +54,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-eslint`,
     // {
     //   resolve: `gatsby-plugin-typography`,
     //   options: {
