@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 
 const styles = css`
 .links {
@@ -102,49 +102,45 @@ const List = styled.li`
 `;
 
 // TODO - improve font scaling
-class Index extends React.Component {
-  render() {
-    return (
-      <div css={styles}>
-        <SEO
-          keywords={[
-            `ajosedev`,
-            `Andrew Jose`,
-            `javascript`,
-            `react`,
-            `webdev`,
-          ]}
-        />
-        <main css={stylesMain}>
-          <div css={stylesGrid}>
-            <header css={stylesHeader}>
-              <h1>Andrew Jose</h1>
-              <ul className="links">
-                <List>
-                  <a href="https://github.com/ajosedev">GitHub</a>
-                </List>
-                <List>
-                  <a href="https://codepen.io/ajosedev/">CodePen</a>
-                </List>
-                <List>
-                  <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
-                </List>
-                <List>
-                  <Link to={`/til`}>TIL</Link>
-                </List>
-              </ul>
-            </header>
-            <ul className="types">
-              <li>Web</li>
-              <li>Software</li>
-              <li>Games</li>
-            </ul>
-            <p css={stylesDeveloper}>Developer</p>
-          </div>
-        </main>
+const Index = () => (
+  <div css={styles}>
+    <SEO
+      keywords={[
+        'ajosedev',
+        'Andrew Jose',
+        'javascript',
+        'react',
+        'webdev',
+      ]}
+    />
+    <main css={stylesMain}>
+      <div css={stylesGrid}>
+        <header css={stylesHeader}>
+          <h1>Andrew Jose</h1>
+          <ul className="links">
+            <List>
+              <a href="https://github.com/ajosedev">GitHub</a>
+            </List>
+            <List>
+              <a href="https://codepen.io/ajosedev/">CodePen</a>
+            </List>
+            <List>
+              <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
+            </List>
+            <List>
+              <Link to="/til">TIL</Link>
+            </List>
+          </ul>
+        </header>
+        <ul className="types">
+          <li>Web</li>
+          <li>Software</li>
+          <li>Games</li>
+        </ul>
+        <p css={stylesDeveloper}>Developer</p>
       </div>
-    );
-  }
-}
+    </main>
+  </div>
+);
 
 export default Index;
