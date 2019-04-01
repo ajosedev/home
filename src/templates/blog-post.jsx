@@ -33,6 +33,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           title={post.frontmatter.title}
         />
 
+        {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <Footer>
