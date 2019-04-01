@@ -40,18 +40,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             {previous && (
               <li>
                 <Link to={previous.fields.slug} rel="prev">
-                  ←
-                  {' '}
-                  {previous.frontmatter.title}
+                  ← {previous.frontmatter.title}
                 </Link>
               </li>
             )}
             {next && (
               <li>
                 <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title}
-                  {' '}
-  →
+                  {next.frontmatter.title} →
                 </Link>
               </li>
             )}

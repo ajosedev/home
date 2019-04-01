@@ -6,5 +6,6 @@ module.exports = {
         'devDependencies': true,
       },
     ],
+    'react/jsx-one-expression-per-line': false,
   },
 };
