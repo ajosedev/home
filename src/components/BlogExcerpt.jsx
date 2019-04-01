@@ -2,22 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
-import BlogPostHeader from '../components/blogPostHeader';
+import BlogPostHeader from './BlogPostHeader';
 
 const styles = css`
   margin-bottom: 3em;
 `;
 
-const BlogExcerpt = props => (
+const BlogExcerpt = ({
+  content,
+  date,
+  link,
+  title,
+}) => (
   <article css={styles}>
     <BlogPostHeader
-      date={props.date}
-      link={props.link}
-      title={props.title}
+      date={date}
+      link={link}
+      title={title}
     />
     <p
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
-        __html: props.content,
+        __html: content,
       }}
     />
   </article>

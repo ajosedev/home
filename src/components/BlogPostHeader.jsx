@@ -12,16 +12,16 @@ const Date = styled.p`
   margin-bottom: 1em;
 `;
 
-const BlogPostHeader = props => (
+const BlogPostHeader = ({ date, link, title }) => (
   <header>
     <H2>
-      {props.link ? (
-        <Link to={props.link}>{props.title}</Link>
+      {link ? (
+        <Link to={link}>{title}</Link>
       ) : (
-        props.title
+        title
       )}
     </H2>
-    <Date>{props.date}</Date>
+    <Date>{date}</Date>
   </header>
 );
 
