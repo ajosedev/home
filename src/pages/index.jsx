@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
-// import styled from '@emotion/styled';
 
 import SEO from '../components/SEO';
 
 // TODO - font scaling
-// TODO - split up css
-// TODO - make this the index page
+// TODO - better fallbacks for blend-mode
+// TODO - get smaller image
 const mainStyles = css`
-  background-color: #4f576b;
+  background-color: #4f576b; // fallback
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -25,15 +24,15 @@ const mainStyles = css`
   color: #fff;
   padding: 2em;
   text-transform: uppercase;
+`;
 
-  header {
-    // TODO - better fallbacks
-    color: black;
-    background-color: white;
-    mix-blend-mode: screen;
-    display: inline-block;
-    border-radius: 2px;
-  }
+const headerStyles = css`
+  color: black;
+  background-color: white;
+  mix-blend-mode: screen;
+  display: inline-block;
+  border-radius: 2px;
+
   h1 {
     margin: 0;
     font-weight: 800;
@@ -42,17 +41,19 @@ const mainStyles = css`
     padding: 0.1em 0.2em 0.2em;
     max-width: 8ch;
   }
-  .role {
-    font-size: 2.4rem;
-    margin: 2em 0 1.5em;
-    font-weight: 800;
-  }
-  .role__full-stack {
-  }
-  .role__developer {
+`;
+
+const roleStyles = css`
+  font-size: 2.4rem;
+  margin: 2em 0 1.5em;
+  font-weight: 800;
+
+  &:last-child {
     font-size: 1.5em;
   }
+`;
 
+const navStyles = css`
   ul {
     display: grid;
     grid-gap: 0.2em 2em;
@@ -83,16 +84,15 @@ const Index = () => (
       ]}
     />
     <main css={mainStyles}>
-      {/* <img src="bg.jpg" alt="background" /> */}
-      <header>
+      <header css={headerStyles}>
         <h1>Andrew Jose</h1>
       </header>
-      <div className="role">
-        <p className="role__full-stack">Full Stack</p>
-        <p className="role__developer">Developer</p>
+      <div css={roleStyles}>
+        <p>Full Stack</p>
+        <p>Developer</p>
       </div>
       {/* TODO - icons */}
-      <nav>
+      <nav css={navStyles}>
         <ul>
           <li>
             <a href="https://github.com/ajosedev">GitHub</a>
