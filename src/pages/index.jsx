@@ -24,6 +24,9 @@ const mainStyles = css`
   color: #fff;
   padding: 2em;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const headerStyles = css`
@@ -48,7 +51,7 @@ const roleStyles = css`
   margin: 2em 0 1.5em;
   font-weight: 800;
 
-  &:last-child {
+  p:last-child {
     font-size: 1.5em;
   }
 `;
@@ -84,30 +87,32 @@ const Index = () => (
       ]}
     />
     <main css={mainStyles}>
-      <header css={headerStyles}>
-        <h1>Andrew Jose</h1>
-      </header>
-      <div css={roleStyles}>
-        <p>Full Stack</p>
-        <p>Developer</p>
+      <div>
+        <header css={headerStyles}>
+          <h1>Andrewoa Jose</h1>
+        </header>
+        <div css={roleStyles}>
+          <p>Full Stack</p>
+          <p>Developer</p>
+        </div>
+        {/* TODO - icons */}
+        <nav css={navStyles}>
+          <ul>
+            <li>
+              <a href="https://github.com/ajosedev">GitHub</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/ajosedev/">CodePen</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
+            </li>
+            <li>
+              <Link to="/til">TIL</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      {/* TODO - icons */}
-      <nav css={navStyles}>
-        <ul>
-          <li>
-            <a href="https://github.com/ajosedev">GitHub</a>
-          </li>
-          <li>
-            <a href="https://codepen.io/ajosedev/">CodePen</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
-          </li>
-          <li>
-            <Link to="/til">TIL</Link>
-          </li>
-        </ul>
-      </nav>
     </main>
   </div>
 );
