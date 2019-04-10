@@ -5,6 +5,9 @@ import { css } from '@emotion/core';
 
 import SEO from '../components/SEO';
 
+// TODO - font scaling
+// TODO - split up css
+// TODO - make this the index page
 const mainStyles = css`
   background-color: #4f576b;
   background:
