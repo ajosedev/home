@@ -89,7 +89,7 @@ const Index = () => (
     <main css={mainStyles}>
       <div>
         <header css={headerStyles}>
-          <h1>Andrewoa Jose</h1>
+          <h1>Andrew Jose</h1>
         </header>
         <div css={roleStyles}>
           <p>Full Stack</p>
