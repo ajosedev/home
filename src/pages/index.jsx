@@ -7,8 +7,12 @@ import SEO from '../components/SEO';
 // TODO - font scaling
 // TODO - better fallbacks for blend-mode
 // TODO - get smaller image
+// TODO - better mobile styling
+// TODO - page transitions
+// TODO - icons for links
 const mainStyles = css`
-  background-color: #4f576b; // fallback
+  // TODO - make colour vars
+  background-color: #29385c; // fallback
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -31,18 +35,16 @@ const mainStyles = css`
 
 const headerStyles = css`
   color: black;
-  background-color: white;
   mix-blend-mode: screen;
   display: inline-block;
   border-radius: 2px;
+  background-color: white;
+  font-size: 4rem;
+  padding: 0.2em 0.2em 0;
 
   h1 {
     margin: 0;
     font-weight: 800;
-    font-size: 9rem;
-    line-height: 0.9;
-    padding: 0.1em 0.2em 0.2em;
-    max-width: 8ch;
   }
 `;
 
@@ -89,13 +91,13 @@ const Index = () => (
     <main css={mainStyles}>
       <div>
         <header css={headerStyles}>
-          <h1>Andrew Jose</h1>
+          <h1>Andrew</h1>
+          <h1>Jose</h1>
         </header>
         <div css={roleStyles}>
           <p>Full Stack</p>
           <p>Developer</p>
         </div>
-        {/* TODO - icons */}
         <nav css={navStyles}>
           <ul>
             <li>

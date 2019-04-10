@@ -7,17 +7,20 @@ const styles = css`
   max-width: 60ch;
   margin: 0 auto;
 
-  header {
-    margin-bottom: 2em;
+  h1 {
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.4em;
   }
-  h1 a {
-    color: #CDA34F;
-  }
+`;
+
+const headerStyles = css`
+  margin-bottom: 3em;
 `;
 
 const BlogLayout = ({ children, root, title }) => (
   <div css={styles}>
-    <header>
+    <header css={headerStyles}>
       <h1>
         <Link to={root ? '/' : '/til'}>{title}</Link>
       </h1>

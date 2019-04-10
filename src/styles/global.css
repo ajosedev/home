@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700|Open+Sans:400');
 html {
   font-family: 'Open Sans', sans-serif;
-  /* font-family: Tahoma, Geneva, Verdana, sans-serif; */
 	background-color: #f1f1f1;
 }
 * {
@@ -12,7 +11,7 @@ html {
 }
 a {
   text-decoration: none;
-  color: #325F8A;
+  color: #193b90;
   transition: color 0.2s;
 }
 a:hover, a:focus {
