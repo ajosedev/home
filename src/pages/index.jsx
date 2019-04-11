@@ -10,6 +10,7 @@ import SEO from '../components/SEO';
 // TODO - better mobile styling
 // TODO - page transitions
 // TODO - icons for links
+// TODO - fix loading white screen
 const mainStyles = css`
   // TODO - make colour vars
   background-color: #29385c; // fallback
@@ -26,21 +27,34 @@ const mainStyles = css`
   width: 100%;
   font-family: 'News Cycle', sans-serif;
   color: #fff;
-  padding: 2em;
+  padding: 1em;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  > div {
+    min-width: 0;
+  }
 `;
 
 const headerStyles = css`
-  color: black;
+  @keyframes colourFade {
+    0% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
+  }
+
+  animation: 2s colourFade forwards;
   mix-blend-mode: screen;
   display: inline-block;
   border-radius: 2px;
   background-color: white;
   font-size: 4rem;
-  padding: 0.2em 0.2em 0;
+  padding: 0.2em 0.2em;
 
   h1 {
     margin: 0;
@@ -62,11 +76,12 @@ const navStyles = css`
   ul {
     display: grid;
     grid-gap: 0.2em 2em;
-    grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     text-transform: initial;
+    font-size: 1.8rem;
   }
   li {
-    font-size: 1.8rem;
+
   }
   a {
     color: #fff;
