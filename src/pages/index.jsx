@@ -4,11 +4,8 @@ import { css } from '@emotion/core';
 
 import SEO from '../components/SEO';
 
-// TODO - font scaling
 // TODO - better fallbacks for blend-mode
 // TODO - get smaller image
-// TODO - better mobile styling
-// TODO - page transitions
 // TODO - icons for links
 // TODO - fix loading white screen
 const mainStyles = css`
@@ -27,7 +24,6 @@ const mainStyles = css`
   width: 100%;
   font-family: 'News Cycle', sans-serif;
   color: #fff;
-  padding: 1em;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -41,10 +37,10 @@ const mainStyles = css`
 const headerStyles = css`
   @keyframes colourFade {
     0% {
-      color: white;
+      color: #bbb;
     }
     100% {
-      color: black;
+      color: #000;
     }
   }
 
@@ -53,8 +49,9 @@ const headerStyles = css`
   display: inline-block;
   border-radius: 2px;
   background-color: white;
-  font-size: 4rem;
   padding: 0.2em 0.2em;
+  --fluid-type-min-size: 2.1;
+  --fluid-type-max-size: 4;
 
   h1 {
     margin: 0;
@@ -63,9 +60,10 @@ const headerStyles = css`
 `;
 
 const roleStyles = css`
-  font-size: 2.4rem;
   margin: 2em 0 1.5em;
   font-weight: 800;
+  --fluid-type-min-size: 1.8;
+  --fluid-type-max-size: 2.5;
 
   p:last-child {
     font-size: 1.5em;
@@ -78,7 +76,8 @@ const navStyles = css`
     grid-gap: 0.2em 2em;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     text-transform: initial;
-    font-size: 1.8rem;
+    --fluid-type-min-size: 1.6;
+    --fluid-type-max-size: 2;
   }
   li {
 
@@ -105,16 +104,16 @@ const Index = () => (
     />
     <main css={mainStyles}>
       <div>
-        <header css={headerStyles}>
+        <header className="fluid-type" css={headerStyles}>
           <h1>Andrew</h1>
           <h1>Jose</h1>
         </header>
-        <div css={roleStyles}>
+        <div className="fluid-type" css={roleStyles}>
           <p>Full Stack</p>
           <p>Developer</p>
         </div>
         <nav css={navStyles}>
-          <ul>
+          <ul className="fluid-type">
             <li>
               <a href="https://github.com/ajosedev">GitHub</a>
             </li>
