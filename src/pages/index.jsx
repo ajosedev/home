@@ -4,12 +4,12 @@ import { css } from '@emotion/core';
 
 import SEO from '../components/SEO';
 
-// TODO - better fallbacks for blend-mode
-// TODO - get smaller image
-// TODO - icons for links
+// TODO - get smaller image/optimise image
+// TODO - icons for links (mobile only?)
 // TODO - fix loading white screen
+// TODO - make colour vars
+// TODO - tests
 const mainStyles = css`
-  // TODO - make colour vars
   background-color: #29385c; // fallback
   background:
     linear-gradient(
