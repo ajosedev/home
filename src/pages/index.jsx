@@ -1,9 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import SEO from '../components/SEO';
 import * as styles from './index.styles';
 
+const ListItem = ({ children, href, to }) => (
+  href ? (
+    <a href={href}>{children}</a>
+  ) : (
+    <Link to={to}>{children}</Link>
+  )
+);
+
+ListItem.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string,
+  to: PropTypes.string,
+};
+
+ListItem.defaultProps = {
+  href: '',
+  to: '',
+};
+
+const links = [{
+  title: 'GitHub',
+  href: 'https://github.com/ajosedev',
+}, {
+  title: 'CodePen',
+  href: 'https://codepen.io/ajosedev',
+}, {
+  title: 'LinkedIn',
+  href: 'https://www.linkedin.com/in/ajosedev',
+}, {
+  title: 'TIL',
+  to: '/til',
+}];
+
+// TODO - improve first paint?
 // TODO - icons for links (mobile only?)
 // TODO - make colour vars
 // TODO - tests
@@ -23,19 +58,9 @@ const Index = () => (
       </div>
       <nav css={styles.nav}>
         <ul className="fluid-type">
-          {/* TODO - component this */}
-          <li>
-            <a href="https://github.com/ajosedev">GitHub</a>
-          </li>
-          <li>
-            <a href="https://codepen.io/ajosedev/">CodePen</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
-          </li>
-          <li>
-            <Link to="/til">TIL</Link>
-          </li>
+          {links.map(link => (
+            <ListItem href={link.href} to={link.to}>{link.title}</ListItem>
+          ))}
         </ul>
       </nav>
     </div>
