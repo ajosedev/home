@@ -1,4 +1,13 @@
-import { css } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
+
+const opacityFade = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const main = css`
   background-color: #29385c; // fallback
@@ -14,7 +23,6 @@ export const main = css`
   width: 100%;
   font-family: 'News Cycle', sans-serif;
   color: #fff;
-  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,12 +54,13 @@ export const header = css`
     }
   }
 
-  animation: 2s colourFade forwards;
+  animation: 1s colourFade forwards;
   mix-blend-mode: screen;
   display: inline-block;
   border-radius: 2px;
   background-color: white;
   padding: 0.2em 0.2em;
+  text-transform: uppercase;
   --fluid-type-min-size: 2.1;
   --fluid-type-max-size: 4;
 
@@ -64,6 +73,9 @@ export const header = css`
 export const role = css`
   margin: 2em 0 1.5em;
   font-weight: 800;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: 1s ${opacityFade} forwards 1s;
   --fluid-type-min-size: 1.8;
   --fluid-type-max-size: 2.5;
 
@@ -77,12 +89,10 @@ export const nav = css`
     display: grid;
     grid-gap: 0.2em 2em;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
-    text-transform: initial;
+    opacity: 0;
+    animation: 1s ${opacityFade} forwards 1s;
     --fluid-type-min-size: 1.6;
     --fluid-type-max-size: 2;
-  }
-  li {
-
   }
   a {
     color: #fff;
