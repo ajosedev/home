@@ -11,7 +11,7 @@ const TIL = ({ data }) => {
 
   return (
     <TILLayout title="ajosedev | TIL" root>
-      <SEO title="TIL" keywords={['blog', 'javascript', 'react', 'webdev']} />
+      <SEO title="TIL" keywords={['blog', 'today i learned', 'til']} />
       {posts.map(({ node }) => (
         <BlogExcerpt
           key={node.fields.slug}

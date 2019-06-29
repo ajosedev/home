@@ -3,6 +3,15 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
+const defaultKeywords = [
+  'ajosedev',
+  'Andrew Jose',
+  'react',
+  'webdev',
+  'javascript',
+  'full stack',
+];
+
 const SEO = ({
   description,
   lang,
@@ -25,6 +34,7 @@ const SEO = ({
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const allKeywords = defaultKeywords.concat(keywords.length > 0 ? keywords : []);
 
   return (
     <Helmet
@@ -66,16 +76,11 @@ const SEO = ({
           name: 'twitter:description',
           content: metaDescription,
         },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-              name: 'keywords',
-              content: keywords.join(', '),
-            }
-            : [],
-        )
-        .concat(meta)}
+        {
+          name: 'keywords',
+          content: allKeywords.join(', '),
+        },
+      ].concat(meta)}
     />
   );
 };

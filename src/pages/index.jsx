@@ -8,18 +8,10 @@ import * as styles from './index.styles';
 // TODO - make colour vars
 // TODO - tests
 // TODO - fade everything in at same time as text fades in? or do some stagger
-// TODO - better TIL/rest of page styling styling
+// TODO - better TIL/rest of page styling
 const Index = () => (
   <main css={styles.main}>
-    <SEO
-      keywords={[
-        'ajosedev',
-        'Andrew Jose',
-        'javascript',
-        'react',
-        'webdev',
-      ]}
-    />
+    <SEO />
     <div>
       <header className="fluid-type" css={styles.header}>
         <h1>Andrew</h1>
