@@ -28,7 +28,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       />
       <article>
         <BlogPostHeader
-          date={post.frontmatter.date}
           title={post.frontmatter.title}
         />
 
@@ -79,7 +78,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        # date(formatString: "MMMM DD, YYYY")
         # description
       }
     }

@@ -16,7 +16,6 @@ const TIL = ({ data }) => {
         <BlogExcerpt
           key={node.fields.slug}
           content={node.frontmatter.description || node.excerpt}
-          date={node.frontmatter.date}
           link={node.fields.slug}
           title={node.frontmatter.title || node.fields.slug}
         />
@@ -46,7 +45,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            # date(formatString: "MMMM DD, YYYY")
             title
             # description
           }

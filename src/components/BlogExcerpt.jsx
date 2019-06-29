@@ -10,13 +10,11 @@ const styles = css`
 
 const BlogExcerpt = ({
   content,
-  date,
   link,
   title,
 }) => (
   <article css={styles}>
     <BlogPostHeader
-      date={date}
       link={link}
       title={title}
     />
@@ -31,7 +29,6 @@ const BlogExcerpt = ({
 
 BlogExcerpt.propTypes = {
   content: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
