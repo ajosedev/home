@@ -11,7 +11,6 @@ export const main = css`
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  height: 100%;
   width: 100%;
   font-family: 'News Cycle', sans-serif;
   color: #fff;
@@ -19,6 +18,7 @@ export const main = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 
   > div {
     min-width: 0;
