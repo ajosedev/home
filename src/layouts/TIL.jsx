@@ -18,7 +18,8 @@ const headerStyles = css`
   margin-bottom: 3em;
 `;
 
-const BlogLayout = ({ children, root, title }) => (
+// TODO - make a layout folder?
+const TILLayout = ({ children, root, title }) => (
   <div css={styles}>
     <header css={headerStyles}>
       <h1>
@@ -30,14 +31,14 @@ const BlogLayout = ({ children, root, title }) => (
   </div>
 );
 
-BlogLayout.propTypes = {
+TILLayout.propTypes = {
   children: PropTypes.node.isRequired,
   root: PropTypes.bool,
   title: PropTypes.string.isRequired,
 };
 
-BlogLayout.defaultProps = {
+TILLayout.defaultProps = {
   root: false,
 };
 
-export default BlogLayout;
+export default TILLayout;

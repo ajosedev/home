@@ -3,26 +3,25 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import styled from '@emotion/styled';
 
-import BlogLayout from '../components/BlogLayout';
-import BlogPostHeader from '../components/BlogPostHeader';
-import SEO from '../components/SEO';
+import TILLayout from '../layouts/TIL';
+import BlogPostHeader from './BlogPostHeader';
+import SEO from './SEO';
 
 const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
   margin-top: 2em;
   padding-top: 0.5em;
-  border-top: 1px solid #1b1d1d
+  border-top: 1px solid #1b1d1d;
 `;
 
-// TODO - why is this in /templates and not /components?
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   // const siteTitle = this.props.data.site.siteMetadata.title;
   const { previous, next } = pageContext;
 
   return (
-    <BlogLayout title="ajosedev | TIL">
+    <TILLayout title="ajosedev | TIL">
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -55,7 +54,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </ul>
         </Footer>
       </article>
-    </BlogLayout>
+    </TILLayout>
   );
 };
 
