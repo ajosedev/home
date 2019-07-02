@@ -6,6 +6,7 @@ import { css } from '@emotion/core';
 const styles = css`
   max-width: 60ch;
   margin: 0 auto;
+  padding: 1em; /* TODO - put this higher up as its in index as well, make a layout? */
 
   > h1, > h2 {
     margin-bottom: 0.4em;
