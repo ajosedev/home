@@ -13,13 +13,13 @@ module.exports = {
         name: 'til',
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: 'assets',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/content/assets`,
+    //     name: 'assets',
+    //   },
+    // },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -45,12 +45,13 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+    // TODO
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     // trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-emotion',
