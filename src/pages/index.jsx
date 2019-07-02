@@ -6,11 +6,13 @@ import SEO from '../components/SEO';
 import * as styles from '../styles/index.styles';
 
 const ListItem = ({ children, href, to }) => (
-  href ? (
-    <a href={href}>{children}</a>
-  ) : (
-    <Link to={to}>{children}</Link>
-  )
+  <li>
+    {href ? (
+      <a href={href}>{children}</a>
+    ) : (
+      <Link to={to}>{children}</Link>
+    )}
+  </li>
 );
 
 ListItem.propTypes = {

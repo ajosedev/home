@@ -89,7 +89,7 @@ export const role = css`
 export const nav = css`
   ul {
     display: grid;
-    grid-gap: 0.2em 2em;
+    grid-gap: 0.2em 2.5em;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     opacity: 0;
     animation: 0.5s ${opacityFade} forwards 0.5s;
