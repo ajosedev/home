@@ -10,7 +10,7 @@ import SEO from './SEO';
 const footerStyles = css`
   margin-top: 2em;
   padding-top: 0.5em;
-  border-top: 1px solid #1b1d1d;
+  border-top: 1px solid #fff;
 
   > ul {
     display: flex;
