@@ -1,18 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import TILLayout from '../layouts/TIL';
 import BlogPostHeader from './BlogPostHeader';
 import SEO from './SEO';
 
-const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
+const footerStyles = css`
   margin-top: 2em;
   padding-top: 0.5em;
   border-top: 1px solid #1b1d1d;
+
+  > ul {
+    display: flex;
+  }
+  .prev {
+    margin-right: auto;
+  }
+  .next {
+    margin-left: auto;
+  }
 `;
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -34,24 +42,24 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <Footer>
+        <footer css={footerStyles}>
           <ul>
             {previous && (
-              <li>
+              <li className="prev">
                 <Link to={previous.fields.slug} rel="prev">
                   ← {previous.frontmatter.title}
                 </Link>
               </li>
             )}
             {next && (
-              <li>
+              <li className="next">
                 <Link to={next.fields.slug} rel="next">
                   {next.frontmatter.title} →
                 </Link>
               </li>
             )}
           </ul>
-        </Footer>
+        </footer>
       </article>
     </TILLayout>
   );
