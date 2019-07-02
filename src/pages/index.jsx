@@ -25,23 +25,25 @@ ListItem.defaultProps = {
 };
 
 const links = [{
-  title: 'GitHub',
-  href: 'https://github.com/ajosedev',
-}, {
   title: 'CodePen',
   href: 'https://codepen.io/ajosedev',
+}, {
+  title: 'GitHub',
+  href: 'https://github.com/ajosedev',
 }, {
   title: 'LinkedIn',
   href: 'https://www.linkedin.com/in/ajosedev',
 }, {
   title: 'TIL',
   to: '/til',
+// }, {
+//   title: 'Labs',
+//   to: '/labs',
 }];
 
 // TODO - icons for links (mobile only?)
 // TODO - make colour vars
 // TODO - tests
-// TODO - better TIL/rest of page styling
 const Index = () => (
   <main css={styles.main}>
     <SEO />

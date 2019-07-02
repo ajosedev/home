@@ -7,24 +7,31 @@ const styles = css`
   max-width: 60ch;
   margin: 0 auto;
 
-  h1 {
-    font-family: 'News Cycle', sans-serif;
-    font-weight: bold;
+  > h1, > h2 {
     margin-bottom: 0.4em;
   }
-`;
 
-const headerStyles = css`
-  margin-bottom: 3em;
+  h1 {
+    color: #5BC0B5; /* TODO - make this a variable */
+  }
+  h2 a {
+    color: #A1CFCA; /* TODO - make this a variable */
+  }
 `;
 
 // TODO - make a layout folder?
 const TILLayout = ({ children, root, title }) => (
   <div css={styles}>
-    <header css={headerStyles}>
-      <h1>
-        <Link to={root ? '/' : '/til'}>{title}</Link>
-      </h1>
+    <header css={css`margin-bottom: 3em;`}>
+      {root ? (
+        <h1>
+          <Link to="/">{title}</Link>
+        </h1>
+      ) : (
+        <h2>
+          <Link to="/til">{title}</Link>
+        </h2>
+      )}
       <p>Small bites of learning that may help you, or future me.</p>
     </header>
     <main>{children}</main>

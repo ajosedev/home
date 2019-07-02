@@ -3,22 +3,21 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 
-const headingStyles = css`
-  margin-bottom: 0.3em;
-  color: #A1CFCA; /* TODO - make this a variable */
-`;
+const BlogPostHeader = ({ link, title }) => {
+  const Heading = link ? 'h2' : 'h1';
 
-const BlogPostHeader = ({ link, title }) => (
-  <header>
-    <h2 css={headingStyles}>
-      {link ? (
-        <Link to={link}>{title}</Link>
-      ) : (
-        title
-      )}
-    </h2>
-  </header>
-);
+  return (
+    <header>
+      <Heading css={css`margin-bottom: 0.3em;`}>
+        {link ? (
+          <Link to={link}>{title}</Link>
+        ) : (
+          title
+        )}
+      </Heading>
+    </header>
+  );
+};
 
 BlogPostHeader.propTypes = {
   link: PropTypes.string,

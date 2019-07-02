@@ -4,16 +4,12 @@ import { css } from '@emotion/core';
 
 import BlogPostHeader from './BlogPostHeader';
 
-const styles = css`
-  margin-bottom: 3em;
-`;
-
 const BlogExcerpt = ({
   content,
   link,
   title,
 }) => (
-  <article css={styles}>
+  <article css={css`margin-bottom: 3em;`}>
     <BlogPostHeader
       link={link}
       title={title}
