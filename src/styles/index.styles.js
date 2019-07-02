@@ -99,8 +99,4 @@ export const nav = css`
   a {
     color: #fff;
   }
-  a:hover {
-    color: #ddd;
-    mix-blend-mode: overlay;
-  }
 `;
