@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import SEO from '../components/SEO';
-import * as styles from './index.styles';
+import * as styles from '../styles/index.styles';
 
 const ListItem = ({ children, href, to }) => (
   href ? (
