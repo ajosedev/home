@@ -38,11 +38,9 @@ const links = [{
   to: '/til',
 }];
 
-// TODO - improve first paint?
 // TODO - icons for links (mobile only?)
 // TODO - make colour vars
 // TODO - tests
-// TODO - fade everything in at same time as text fades in? or do some stagger
 // TODO - better TIL/rest of page styling
 const Index = () => (
   <main css={styles.main}>

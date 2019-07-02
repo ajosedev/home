@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-const H2 = styled.h2`
+const headingStyles = css`
   margin-bottom: 0.3em;
+  color: #A1CFCA; /* TODO - make this a variable */
 `;
 
 const BlogPostHeader = ({ link, title }) => (
   <header>
-    <H2>
+    <h2 css={headingStyles}>
       {link ? (
         <Link to={link}>{title}</Link>
       ) : (
         title
       )}
-    </H2>
+    </h2>
   </header>
 );
 

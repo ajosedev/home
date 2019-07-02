@@ -10,7 +10,7 @@ const opacityFade = keyframes`
 `;
 
 export const main = css`
-  background-color: #29385c; // fallback
+  background-color: #29385c; /* fallback */
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -48,13 +48,15 @@ export const header = css`
   @keyframes colourFade {
     0% {
       color: #bbb;
+      opacity: 0;
     }
     100% {
       color: #000;
+      opacity: 1;
     }
   }
 
-  animation: 1s colourFade forwards;
+  animation: 0.5s colourFade forwards;
   mix-blend-mode: screen;
   display: inline-block;
   border-radius: 2px;
@@ -75,7 +77,7 @@ export const role = css`
   font-weight: 800;
   text-transform: uppercase;
   opacity: 0;
-  animation: 1s ${opacityFade} forwards 1s;
+  animation: 0.5s ${opacityFade} forwards 0.5s;
   --fluid-type-min-size: 1.8;
   --fluid-type-max-size: 2.5;
 
@@ -90,7 +92,7 @@ export const nav = css`
     grid-gap: 0.2em 2em;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     opacity: 0;
-    animation: 1s ${opacityFade} forwards 1s;
+    animation: 0.5s ${opacityFade} forwards 0.5s;
     --fluid-type-min-size: 1.6;
     --fluid-type-max-size: 2;
   }
