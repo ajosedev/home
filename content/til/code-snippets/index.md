@@ -3,8 +3,7 @@ title: Code snippets w/ Gatsby
 date: "2019-03-20"
 ---
 
-How to have code snippets in excerpts of blog posts
-using `gatsby-starter-blog`.
+How to use code snippets in excerpts of blog posts, using `gatsby-starter-blog`.
 
 ```html
 <code>
@@ -23,13 +22,13 @@ Add an `excerpt_separator` to `gatsby-config.js` plugins
 }
 ```
 
-Add the separator to the markdown file after the excerpt
+Add your chosen separator to the markdown file after the excerpt and your code sample
 ```md
 Code snippet goes here
 <!-- end -->
 ```
 
-Retrieve the excerpt in HTML format with the GraphQL query
+Retrieve the excerpt in `HTML` format with the GraphQL query
 ```
 excerpt(format: HTML)
 ```

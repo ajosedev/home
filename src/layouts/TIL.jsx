@@ -25,7 +25,7 @@ const TILLayout = ({ children, root, title }) => (
       <h1>
         <Link to={root ? '/' : '/til'}>{title}</Link>
       </h1>
-      <p>A bunch of short bites of information that may help you (or me).</p>
+      <p>Small bites of learning that may help you, or future me.</p>
     </header>
     <main>{children}</main>
   </div>
