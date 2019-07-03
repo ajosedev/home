@@ -16,7 +16,7 @@ export const stripe = css`
   background-color: #fff;
   mix-blend-mode: overlay;
 
-  animation: 0.2s ${opacityFade} forwards;
+  animation: 0.5s ${opacityFade} forwards;
 `;
 
 export const topStripe = css`
@@ -58,6 +58,7 @@ export const main = css`
   position: relative;
   overflow: hidden;
 
+  /* TODO - get a better quality bg-large */
   @media (min-width: 45em) {
     background:
       linear-gradient(
