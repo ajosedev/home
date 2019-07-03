@@ -49,23 +49,25 @@ const links = [{
 const Index = () => (
   <main css={styles.main}>
     <SEO />
-    <div>
-      <header className="fluid-type" css={styles.header}>
-        <h1>Andrew</h1>
-        <h1>Jose</h1>
-      </header>
-      <div className="fluid-type" css={styles.role}>
-        <p>Full Stack</p>
-        <p>Developer</p>
+    <span css={styles.background} aria-hidden="true" />
+    <header className="fluid-type" css={styles.header}>
+      <div>
+        <h1 data-text="Andrew">Andrew</h1>
+        <h1 data-text="Jose">Jose</h1>
       </div>
-      <nav css={styles.nav}>
-        <ul className="fluid-type">
-          {links.map(link => (
-            <ListItem href={link.href} to={link.to}>{link.title}</ListItem>
-          ))}
-        </ul>
-      </nav>
+    </header>
+    <div className="fluid-type" css={styles.role}>
+      <p>Full Stack</p>
+      <p>Developer</p>
     </div>
+    <nav css={styles.nav}>
+      <ul className="fluid-type">
+        {links.map(link => (
+          <ListItem href={link.href} to={link.to}>{link.title}</ListItem>
+        ))}
+      </ul>
+    </nav>
+    <span css={styles.stripe} />
   </main>
 );
 
