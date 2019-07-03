@@ -9,34 +9,30 @@ const opacityFade = keyframes`
   }
 `;
 
-export const background = css`
+export const stripe = css`
   grid-column: 1 / -1;
-  grid-row: 2;
-  max-height: var(--stripe-height);
-  margin-bottom: 2em;
+  max-height: 12.5rem;
 
   background-color: #fff;
   mix-blend-mode: overlay;
-  transform: skewY(calc(-1 * var(--skew)));
 
   animation: 0.2s ${opacityFade} forwards;
 `;
 
-export const stripe = css`
-  grid-column: 1 / -1;
+export const topStripe = css`
+  grid-row: 2;
+  margin-bottom: 2em;
+
+  transform: skewY(calc(-1 * var(--skew)));
+`;
+
+export const bottomStripe = css`
   grid-row: 4;
-  max-height: var(--stripe-height);
-
-  background-color: white;
-  mix-blend-mode: overlay;
   transform: skewY(var(--skew));
-
-  animation: 0.2s ${opacityFade} forwards;
 `;
 
 export const main = css`
   --skew: 25deg;
-  --stripe-height: 12.5rem;
 
   display: grid;
   grid-template-columns: minmax(1em, 1fr) [content] max-content minmax(1em, 1fr);

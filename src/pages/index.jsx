@@ -43,13 +43,13 @@ const links = [{
 //   to: '/labs',
 }];
 
-// TODO - icons for links (mobile only?)
 // TODO - make colour vars
 // TODO - tests
 const Index = () => (
   <main css={styles.main}>
     <SEO />
-    <span css={styles.background} aria-hidden="true" />
+    <span css={[styles.stripe, styles.topStripe]} aria-hidden="true" />
+    <span css={[styles.stripe, styles.bottomStripe]} aria-hidden="true" />
     <header className="fluid-type" css={styles.header}>
       <div>
         <h1 data-text="Andrew">Andrew</h1>
@@ -67,7 +67,6 @@ const Index = () => (
         ))}
       </ul>
     </nav>
-    <span css={styles.stripe} />
   </main>
 );
 
