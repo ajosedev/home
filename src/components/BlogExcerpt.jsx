@@ -9,7 +9,7 @@ const BlogExcerpt = ({
   link,
   title,
 }) => (
-  <article css={css`margin-bottom: 3em;`}>
+  <article css={css`margin-bottom: 3.5em;`}>
     <BlogPostHeader
       link={link}
       title={title}

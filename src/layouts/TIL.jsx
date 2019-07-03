@@ -11,7 +11,6 @@ const styles = css`
   > h1, > h2 {
     margin-bottom: 0.4em;
   }
-
   h1 {
     color: #5BC0B5; /* TODO - make this a variable */
   }
@@ -20,10 +19,16 @@ const styles = css`
   }
 `;
 
+const headerStyles = css`
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  /* border-bottom: 1px solid #fff; */
+`;
+
 // TODO - make a layout folder?
 const TILLayout = ({ children, root, title }) => (
   <div css={styles}>
-    <header css={css`margin-bottom: 3em;`}>
+    <header css={headerStyles}>
       {root ? (
         <h1>
           <Link to="/">{title}</Link>

@@ -63,6 +63,7 @@ export const header = css`
   background-color: white;
   padding: 0.2em 0.2em;
   text-transform: uppercase;
+  line-height: 1;
   --fluid-type-min-size: 2.1;
   --fluid-type-max-size: 4;
 
@@ -78,6 +79,7 @@ export const role = css`
   text-transform: uppercase;
   opacity: 0;
   animation: 0.5s ${opacityFade} forwards 0.5s;
+  line-height: 1;
   --fluid-type-min-size: 1.8;
   --fluid-type-max-size: 2.5;
 
@@ -87,9 +89,10 @@ export const role = css`
 `;
 
 export const nav = css`
+  /* TODO - make this 2x2 and then 4x1 on mobile? */
   ul {
     display: grid;
-    grid-gap: 0.2em 2.5em;
+    grid-gap: 0.2em 2em;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     opacity: 0;
     animation: 0.5s ${opacityFade} forwards 0.5s;

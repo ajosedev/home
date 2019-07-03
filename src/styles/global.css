@@ -4,6 +4,9 @@ html {
   background-color: #2C3338; /* TODO - make this a variable */
   color: #fff;
 }
+body {
+  line-height: 1.4;
+}
 * {
   box-sizing: border-box;
 }
