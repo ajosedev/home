@@ -10,28 +10,34 @@ const opacityFade = keyframes`
 `;
 
 export const background = css`
-  background-color: #fff;
   grid-column: 1 / -1;
   grid-row: 2;
-  transform: skewY(-25deg);
-  opacity: 0;
-  animation: 0.2s ${opacityFade} forwards;
+  max-height: var(--stripe-height);
   margin-bottom: 2em;
+
+  background-color: #fff;
   mix-blend-mode: overlay;
-  max-height: 12.5rem;
+  transform: skewY(calc(-1 * var(--skew)));
+
+  animation: 0.2s ${opacityFade} forwards;
 `;
 
 export const stripe = css`
   grid-column: 1 / -1;
   grid-row: 4;
+  max-height: var(--stripe-height);
+
   background-color: white;
   mix-blend-mode: overlay;
-  transform: skewY(25deg);
-  max-height: 12.5rem;
+  transform: skewY(var(--skew));
+
   animation: 0.2s ${opacityFade} forwards;
 `;
 
 export const main = css`
+  --skew: 25deg;
+  --stripe-height: 12.5rem;
+
   display: grid;
   grid-template-columns: minmax(1em, 1fr) [content] max-content minmax(1em, 1fr);
   grid-template-rows: 0.5fr max-content max-content 1fr;
@@ -70,8 +76,8 @@ export const main = css`
 
 export const header = css`
   grid-row: 2;
+  padding: 0.2em 0.3em;
 
-  border-radius: 2px;
   text-transform: uppercase;
   line-height: 1;
   --fluid-type-min-size: 2.1;
@@ -84,37 +90,25 @@ export const header = css`
   animation: 0.4s ${opacityFade} forwards 0.2s;
   mix-blend-mode: lighten;
 
-  > div {
-    background-color: white;
-    padding: 0.2em 0.3em;
-    color: #000;
-    border-radius: 4px;
-  }
+  background-color: white;
+  color: #000;
+  border-radius: 4px;
 
   h1 {
     margin: 0;
     font-weight: 800;
-    position: relative;
-    /* mix-blend-mode: difference; */
-    /* text-shadow: 3px 3px rgba(0, 0, 0, 0.5); */
   }
-  /* h1:after {
-    content: attr(data-text);
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    color: black;
-    z-index: -1;
-  } */
 `;
 
 export const role = css`
   grid-area: 3 / content;
   margin: 3em 0 1em;
-  font-weight: 800;
-  text-transform: uppercase;
+
   opacity: 0;
   animation: 0.4s ${opacityFade} forwards 0.6s;
+
+  font-weight: 800;
+  text-transform: uppercase;
   line-height: 1;
   --fluid-type-min-size: 1.8;
   --fluid-type-max-size: 2.5;
@@ -132,8 +126,10 @@ export const nav = css`
     display: grid;
     grid-gap: 0.2em 2em;
     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+
     opacity: 0;
     animation: 0.4s ${opacityFade} forwards 0.6s;
+
     --fluid-type-min-size: 1.6;
     --fluid-type-max-size: 2;
   }
