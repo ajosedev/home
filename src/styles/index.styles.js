@@ -25,7 +25,6 @@ export const stripe = css`
   grid-column: 1 / -1;
   grid-row: 4;
   background-color: white;
-  display: block;
   mix-blend-mode: overlay;
   transform: skewY(25deg);
   max-height: 12.5rem;
@@ -38,13 +37,14 @@ export const main = css`
   grid-template-rows: 0.5fr max-content max-content 1fr;
 
   min-height: 100vh;
+  height: 100%;
   width: 100%;
 
   background-color: #29385c; /* fallback */
   background:
     linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.3)
     ),
     url('/bg.jpg');
   background-size: cover;
@@ -53,11 +53,14 @@ export const main = css`
   font-family: 'News Cycle', sans-serif;
   color: #fff;
 
+  position: relative;
+  overflow: hidden;
+
   @media (min-width: 45em) {
     background:
       linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0)
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.3)
       ),
       url('/bg-large.jpg');
     background-size: cover;
@@ -79,6 +82,14 @@ export const header = css`
 
   opacity: 0;
   animation: 0.4s ${opacityFade} forwards 0.2s;
+  mix-blend-mode: lighten;
+
+  > div {
+    background-color: white;
+    padding: 0.2em 0.3em;
+    color: #000;
+    border-radius: 4px;
+  }
 
   h1 {
     margin: 0;
