@@ -17,6 +17,9 @@ const styles = css`
   h2 a {
     color: #A1CFCA; /* TODO - make this a variable */
   }
+  .gatsby-resp-image-link {
+    margin: 1rem;
+  }
 `;
 
 const headerStyles = css`
