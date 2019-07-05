@@ -4,19 +4,13 @@ import { css } from '@emotion/core';
 
 import BlogPostHeader from './BlogPostHeader';
 
-const styles = css`
-  margin-bottom: 3em;
-`;
-
 const BlogExcerpt = ({
   content,
-  date,
   link,
   title,
 }) => (
-  <article css={styles}>
+  <article css={css`margin-bottom: 3.5em;`}>
     <BlogPostHeader
-      date={date}
       link={link}
       title={title}
     />
@@ -31,7 +25,6 @@ const BlogExcerpt = ({
 
 BlogExcerpt.propTypes = {
   content: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };

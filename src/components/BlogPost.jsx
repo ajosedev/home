@@ -1,61 +1,67 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-import BlogLayout from '../components/BlogLayout';
-import BlogPostHeader from '../components/BlogPostHeader';
-import SEO from '../components/SEO';
+import TILLayout from '../layouts/TIL';
+import BlogPostHeader from './BlogPostHeader';
+import SEO from './SEO';
 
-const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
+const footerStyles = css`
   margin-top: 2em;
   padding-top: 0.5em;
-  border-top: 1px solid #1b1d1d
+  border-top: 1px solid #fff;
+
+  > ul {
+    display: flex;
+  }
+  .prev {
+    margin-right: auto;
+  }
+  .next {
+    margin-left: auto;
+  }
 `;
 
-// TODO - why is this in /templates and not /components?
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   // const siteTitle = this.props.data.site.siteMetadata.title;
   const { previous, next } = pageContext;
 
   return (
-    <BlogLayout title="ajosedev | TIL">
+    <TILLayout title="ajosedev | TIL">
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
         <BlogPostHeader
-          date={post.frontmatter.date}
           title={post.frontmatter.title}
         />
 
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <Footer>
+        <footer css={footerStyles}>
           <ul>
             {previous && (
-              <li>
+              <li className="prev">
                 <Link to={previous.fields.slug} rel="prev">
                   ← {previous.frontmatter.title}
                 </Link>
               </li>
             )}
             {next && (
-              <li>
+              <li className="next">
                 <Link to={next.fields.slug} rel="next">
                   {next.frontmatter.title} →
                 </Link>
               </li>
             )}
           </ul>
-        </Footer>
+        </footer>
       </article>
-    </BlogLayout>
+    </TILLayout>
   );
 };
 
@@ -80,7 +86,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        # date(formatString: "MMMM DD, YYYY")
         # description
       }
     }

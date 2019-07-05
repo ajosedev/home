@@ -2,26 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+import TILLayout from '../layouts/TIL';
 import BlogExcerpt from '../components/BlogExcerpt';
-import BlogLayout from '../components/BlogLayout';
 import SEO from '../components/SEO';
 
 const TIL = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <BlogLayout title="ajosedev | TIL" root>
-      <SEO title="TIL" keywords={['blog', 'javascript', 'react', 'webdev']} />
+    <TILLayout title="ajosedev | TIL" root>
+      <SEO title="TIL" keywords={['blog', 'today i learned', 'til']} />
       {posts.map(({ node }) => (
         <BlogExcerpt
           key={node.fields.slug}
           content={node.frontmatter.description || node.excerpt}
-          date={node.frontmatter.date}
           link={node.fields.slug}
           title={node.frontmatter.title || node.fields.slug}
         />
       ))}
-    </BlogLayout>
+    </TILLayout>
   );
 };
 
@@ -46,7 +45,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            # date(formatString: "MMMM DD, YYYY")
             title
             # description
           }

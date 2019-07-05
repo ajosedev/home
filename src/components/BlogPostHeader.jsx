@@ -1,32 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-const H2 = styled.h2`
-  margin-bottom: 0.3em;
-`;
+const BlogPostHeader = ({ link, title }) => {
+  const Heading = link ? 'h2' : 'h1';
 
-const Date = styled.p`
-  font-size: 0.8rem;
-  margin-bottom: 1em;
-`;
-
-const BlogPostHeader = ({ date, link, title }) => (
-  <header>
-    <H2>
-      {link ? (
-        <Link to={link}>{title}</Link>
-      ) : (
-        title
-      )}
-    </H2>
-    <Date>{date}</Date>
-  </header>
-);
+  return (
+    <header>
+      <Heading css={css`margin-bottom: 0.3em;`}>
+        {link ? (
+          <Link to={link}>{title}</Link>
+        ) : (
+          title
+        )}
+      </Heading>
+    </header>
+  );
+};
 
 BlogPostHeader.propTypes = {
-  date: PropTypes.string.isRequired,
   link: PropTypes.string,
   title: PropTypes.string.isRequired,
 };
