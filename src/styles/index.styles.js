@@ -10,6 +10,7 @@ const opacityFade = keyframes`
 `;
 
 export const stripe = css`
+  grid-row: 2;
   grid-column: 1 / -1;
   max-height: 12.5rem;
 
@@ -20,19 +21,15 @@ export const stripe = css`
 `;
 
 export const topStripe = css`
-  grid-row: 2;
-  margin-bottom: 2em;
-
   transform: skewY(calc(-1 * var(--skew)));
 `;
 
 export const bottomStripe = css`
-  grid-row: 4;
-  transform: skewY(var(--skew));
+  transform: skewY(var(--skew)) translateY(50vh);
 `;
 
 export const main = css`
-  --skew: 25deg;
+  --skew: -25deg;
 
   display: grid;
   grid-template-columns: minmax(1em, 1fr) [content] max-content minmax(1em, 1fr);
@@ -45,7 +42,7 @@ export const main = css`
   background-color: #29385c; /* fallback */
   background:
     linear-gradient(
-      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.3)
     ),
     url('/bg.jpg');
@@ -62,8 +59,8 @@ export const main = css`
   @media (min-width: 45em) {
     background:
       linear-gradient(
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.3)
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.4)
       ),
       url('/bg-large.jpg');
     background-size: cover;

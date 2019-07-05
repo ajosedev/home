@@ -43,7 +43,6 @@ const links = [{
 //   to: '/labs',
 }];
 
-// TODO - make colour vars
 // TODO - tests
 const Index = () => (
   <main css={styles.main}>
