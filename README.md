@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/81337090-c477-4089-b158-ba480b586fb9/deploy-status)](https://app.netlify.com/sites/ajosedev/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/81337090-c477-4089-b158-ba480b586fb9/deploy-status)](https://ajose.dev)
 
 # Home
 
