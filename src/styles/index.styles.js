@@ -115,11 +115,10 @@ export const role = css`
 export const nav = css`
   grid-area: 4 / content;
 
-  /* TODO - make this 2x2 and then 4x1 on mobile? */
   ul {
     display: grid;
     grid-gap: 0.2em 2em;
-    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+    grid-template-columns: repeat(2, minmax(100px, max-content));
 
     opacity: 0;
     animation: 0.4s ${opacityFade} forwards 0.6s;
