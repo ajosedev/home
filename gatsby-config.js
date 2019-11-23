@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Andrew Jose | Full stack dev',
+    title: 'Andrew Jose | Full stack engineer',
     author: 'Andrew Jose',
-    description: 'Full stack developer',
+    description: 'Full stack engineer',
     siteUrl: 'https://ajose.dev/',
   },
   plugins: [
