@@ -7,7 +7,7 @@ Soft hyphens and the CSS `hyphens` property
 
 <!-- end -->
 
-There's a CSS property called `hyphens` which can help the browser break words across multiple lines and insert hyphens as necessary. However you can also suggest 'line break opportunities' to the browser using 'soft hyphens'. In HTML, these are written as `&shy;`.
+The `hyphens` CSS property can help the browser break words across multiple lines and insert hyphens as it deems fit. However, it's possible to suggest 'line break opportunities' to the browser using 'soft hyphens'. In HTML, these are written as `&shy;`.
 
 The `&shy;` character is not rendered visibly.
 
