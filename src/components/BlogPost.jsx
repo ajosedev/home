@@ -40,7 +40,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         />
 
         {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="flow" dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <footer css={footerStyles}>
           <ul>

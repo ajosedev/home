@@ -55,3 +55,10 @@ h6 {
       (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
   );
 }
+.flow {
+  --flow-space: 1em;
+}
+.flow > * + * {
+  margin-top: 1em; /* Fallback for browsers without custom property support */
+  margin-top: var(--flow-space);
+}
