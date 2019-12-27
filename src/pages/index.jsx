@@ -61,7 +61,7 @@ const Index = () => (
     </div>
     <nav css={styles.nav}>
       <ul className="fluid-type">
-        {links.map((link) => (
+        {links.map(link => (
           <ListItem href={link.href} to={link.to}>{link.title}</ListItem>
         ))}
       </ul>
