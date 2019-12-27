@@ -45,22 +45,9 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    // TODO
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     // trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-emotion',
     'gatsby-plugin-eslint',
-    // {
-    //   resolve: `gatsby-plugin-typography`,
-    //   options: {
-    //     pathToConfigModule: `src/utils/typography`,
-    //   },
-    // },
   ],
 };
