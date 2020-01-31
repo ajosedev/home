@@ -1,6 +1,2 @@
-# Redirect domain aliases to primary domain
-https://ajosedev.com/* https://ajose.dev/:splat 301!
-https://www.ajosedev.com/* https://ajose.dev/:splat 301!
-
 # Redirect default Netlify subdomain to primary domain
 https://ajosedev.netlify.com/* https://ajose.dev/:splat 301!
