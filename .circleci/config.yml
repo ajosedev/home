@@ -23,7 +23,7 @@ jobs:
     steps:
       - checkout
       - install-and-cache
-  build:
+  lint:
     executor:
       name: node/default
     steps:
