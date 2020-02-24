@@ -24,6 +24,7 @@ jobs:
       - checkout
       - install-and-cache
   lint:
+    working_directory: ~/home
     executor:
       name: node/default
     steps:
