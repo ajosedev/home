@@ -14,7 +14,7 @@ const BlogExcerpt = ({
       link={link}
       title={title}
     />
-    <p
+    <div
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: content,
