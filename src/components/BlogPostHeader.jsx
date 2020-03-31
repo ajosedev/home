@@ -8,12 +8,12 @@ const BlogPostHeader = ({ link, title }) => {
 
   return (
     <header>
-      <Heading css={css`margin-bottom: 0.3em;`}>
-        {link ? (
-          <Link to={link}>{title}</Link>
-        ) : (
-          title
-        )}
+      <Heading
+        css={css`
+          margin-bottom: 0.3em;
+        `}
+      >
+        {link ? <Link to={link}>{title}</Link> : title}
       </Heading>
     </header>
   );

@@ -12,13 +12,7 @@ const defaultKeywords = [
   'full stack',
 ];
 
-const SEO = ({
-  description,
-  lang,
-  meta,
-  keywords,
-  title,
-}) => {
+const SEO = ({ description, lang, meta, keywords, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -34,7 +28,9 @@ const SEO = ({
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const allKeywords = defaultKeywords.concat(keywords.length > 0 ? keywords : []);
+  const allKeywords = defaultKeywords.concat(
+    keywords.length > 0 ? keywords : [],
+  );
 
   return (
     <Helmet

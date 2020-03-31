@@ -7,11 +7,7 @@ import * as styles from '../styles/index.styles';
 
 const ListItem = ({ children, href, to }) => (
   <li>
-    {href ? (
-      <a href={href}>{children}</a>
-    ) : (
-      <Link to={to}>{children}</Link>
-    )}
+    {href ? <a href={href}>{children}</a> : <Link to={to}>{children}</Link>}
   </li>
 );
 
@@ -26,22 +22,27 @@ ListItem.defaultProps = {
   to: '',
 };
 
-const links = [{
-  title: 'CodePen',
-  href: 'https://codepen.io/ajosedev',
-}, {
-  title: 'GitHub',
-  href: 'https://github.com/ajosedev',
-}, {
-  title: 'LinkedIn',
-  href: 'https://www.linkedin.com/in/ajosedev',
-}, {
-  title: 'TIL',
-  to: '/til',
-// }, {
-//   title: 'Labs',
-//   to: '/labs',
-}];
+const links = [
+  {
+    title: 'CodePen',
+    href: 'https://codepen.io/ajosedev',
+  },
+  {
+    title: 'GitHub',
+    href: 'https://github.com/ajosedev',
+  },
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ajosedev',
+  },
+  {
+    title: 'TIL',
+    to: '/til',
+    // }, {
+    //   title: 'Labs',
+    //   to: '/labs',
+  },
+];
 
 // TODO - tests
 const Index = () => (
@@ -61,8 +62,10 @@ const Index = () => (
     </div>
     <nav css={styles.nav}>
       <ul className="fluid-type">
-        {links.map(link => (
-          <ListItem href={link.href} to={link.to}>{link.title}</ListItem>
+        {links.map((link) => (
+          <ListItem href={link.href} to={link.to}>
+            {link.title}
+          </ListItem>
         ))}
       </ul>
     </nav>

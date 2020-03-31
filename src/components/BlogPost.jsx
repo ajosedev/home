@@ -35,9 +35,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
-        <BlogPostHeader
-          title={post.frontmatter.title}
-        />
+        <BlogPostHeader title={post.frontmatter.title} />
 
         {/* eslint-disable-next-line react/no-danger */}
         <div className="flow" dangerouslySetInnerHTML={{ __html: post.html }} />

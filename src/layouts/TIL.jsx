@@ -8,14 +8,15 @@ const styles = css`
   margin: 0 auto;
   padding: 1em; /* TODO - put this higher up as its in index as well, make a layout? */
 
-  > h1, > h2 {
+  > h1,
+  > h2 {
     margin-bottom: 0.4em;
   }
   h1 {
-    color: #5BC0B5; /* TODO - make this a variable */
+    color: #5bc0b5; /* TODO - make this a variable */
   }
   h2 a {
-    color: #A1CFCA; /* TODO - make this a variable */
+    color: #a1cfca; /* TODO - make this a variable */
   }
   .gatsby-resp-image-link {
     margin: 1rem;
