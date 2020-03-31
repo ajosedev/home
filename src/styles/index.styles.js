@@ -40,11 +40,7 @@ export const main = css`
   width: 100%;
 
   background-color: #29385c; /* fallback */
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.3)
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
     url('/bg.jpg');
   background-size: cover;
   background-position: center;
@@ -57,11 +53,7 @@ export const main = css`
 
   /* TODO - get a better quality bg-large */
   @media (min-width: 45em) {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.4)
-      ),
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
       url('/bg-large.jpg');
     background-size: cover;
     background-position: center;
