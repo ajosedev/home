@@ -12,7 +12,9 @@ const defaultKeywords = [
   'full stack',
 ];
 
-const SEO = ({ description, lang, meta, keywords, title }) => {
+const SEO = ({
+  description, lang, meta, keywords, title,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
