@@ -54,7 +54,7 @@ const Index = () => (
       </div>
     </header>
     <div className="fluid-type" css={styles.role}>
-      <p>Full Stack</p>
+      <p>Software</p>
       <p>Engineer</p>
     </div>
     <nav css={styles.nav}>
