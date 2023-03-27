@@ -24,8 +24,8 @@ ListItem.defaultProps = {
 
 const links = [
   {
-    title: 'CodePen',
-    href: 'https://codepen.io/ajosedev',
+    title: 'Garden',
+    href: 'https://garden.ajose.dev',
   },
   {
     title: 'GitHub',
@@ -36,11 +36,8 @@ const links = [
     href: 'https://www.linkedin.com/in/ajosedev',
   },
   {
-    title: 'TIL',
-    to: '/til',
-    // }, {
-    //   title: 'Labs',
-    //   to: '/labs',
+    title: 'CodePen',
+    href: 'https://codepen.io/ajosedev',
   },
 ];
 
@@ -57,7 +54,7 @@ const Index = () => (
       </div>
     </header>
     <div className="fluid-type" css={styles.role}>
-      <p>Full Stack</p>
+      <p>Software</p>
       <p>Engineer</p>
     </div>
     <nav css={styles.nav}>
