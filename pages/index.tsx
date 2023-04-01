@@ -24,7 +24,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>ajosedev</title>
+                <title>Andrew Jose | Software Engineer</title>
                 <meta
                     name="description"
                     content="ajosedev's little corner of the internet"
