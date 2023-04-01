@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 
 const links = [
     {
-        title: 'Garden',
+        title: 'Digital Garden',
         href: 'https://garden.ajose.dev',
     },
     {
@@ -13,10 +13,6 @@ const links = [
     {
         title: 'LinkedIn',
         href: 'https://www.linkedin.com/in/ajosedev',
-    },
-    {
-        title: 'CodePen',
-        href: 'https://codepen.io/ajosedev',
     },
 ];
 
@@ -58,9 +54,9 @@ export default function Home() {
                 <nav className={styles.nav}>
                     <ul className="fluid-type">
                         {links.map((link) => (
-                            <a key={link.href} href={link.href}>
-                                {link.title}
-                            </a>
+                            <li key={link.href}>
+                                <a href={link.href}>{link.title}</a>
+                            </li>
                         ))}
                     </ul>
                 </nav>

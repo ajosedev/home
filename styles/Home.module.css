@@ -87,7 +87,7 @@
 
 .role {
     grid-area: 3 / content;
-    margin: 3em 0 1em;
+    margin: 1.5em 0 0.75em;
 
     opacity: 0;
     animation: 0.4s opacityFade forwards 0.6s;
@@ -108,9 +108,7 @@
 }
 
 .nav ul {
-    display: grid;
-    grid-gap: 0.2em 2em;
-    grid-template-columns: repeat(2, minmax(100px, max-content));
+    list-style-type: none;
 
     opacity: 0;
     animation: 0.4s opacityFade forwards 0.6s;
@@ -121,4 +119,8 @@
 
 .nav a {
     color: #fff;
+}
+
+.spanLink {
+    grid-column: 1 / -1;
 }
