@@ -28,7 +28,7 @@ export default function Home() {
     ], // TODO - make this random
     colorspace: 'OKLCH',
     // TODO - Once over 4.5, should switch to white
-    ratios: [1.05, 1.12, 1.33, 1.94, 3.0, 4.52, 6.6, 10.3, 15.0],
+    ratios: [1.2, 2, 3, 4.5, 6, 7.5, 10, 12],
   });
 
   const theme = new Theme({
@@ -69,6 +69,7 @@ export default function Home() {
         <a>LinkedIn</a>
         <a>Digital Garden</a>
         <a>GitHub</a>
+        <button>Randomise colours</button>
       </main>
     </div>
   );
