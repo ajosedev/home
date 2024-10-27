@@ -166,3 +166,28 @@ a.secondary {
     filter: invert();
   }
 }
+
+.title :nth-child(1) {
+  color: var(--accent100);
+}
+.title :nth-child(2) {
+  color: var(--accent200);
+}
+.title :nth-child(3) {
+  color: var(--accent300);
+}
+.title :nth-child(4) {
+  color: var(--accent400);
+}
+.title :nth-child(5) {
+  color: var(--accent500);
+}
+.title :nth-child(6) {
+  color: var(--accent600);
+}
+.title :nth-child(7) {
+  color: var(--accent700);
+}
+.title :nth-child(8) {
+  color: var(--accent800);
+}
