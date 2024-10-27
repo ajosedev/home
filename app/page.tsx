@@ -23,6 +23,7 @@ const black = new BackgroundColor({
 });
 
 export default function Home() {
+  // TODO - sort hydration issues
   const [accentColors, setAccentColors] = useState<CssColor[]>(() => [
     createRandomHexColor(),
     createRandomHexColor(),
@@ -58,6 +59,7 @@ export default function Home() {
     };
   }, {});
 
+  // TODO - style this into design system-y things, showing off the accent colours
   return (
     <div className={styles.page} style={themeCss}>
       <main className={styles.main}>
@@ -74,6 +76,7 @@ export default function Home() {
         <div className="pill">Software Engineer</div>
         <div className="pill">Frontend</div>
         <div className="pill">Design Systems</div>
+        {/*TODO - find a nice way of displaying these somewhere*/}
         <p>{JSON.stringify(colors)}</p>
         <a>LinkedIn</a>
         <a>Digital Garden</a>
