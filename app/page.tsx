@@ -1,31 +1,40 @@
+'use client';
+
 import {
   Theme,
   Color,
   BackgroundColor,
   CssColor,
 } from '@adobe/leonardo-contrast-colors';
+import { useState } from 'react';
 import styles from './page.module.css';
 
-function createRandomHexColor() {
+const createRandomHexColor = () => {
   return '#000000'.replace(/0/g, function () {
     return (~~(Math.random() * 16)).toString(16);
-  });
-}
+  }) as CssColor;
+};
+
+const black = new BackgroundColor({
+  name: 'black',
+  colorKeys: ['#000000'],
+  colorspace: 'OKLCH',
+  ratios: [1, 3, 4.5, 6.6],
+});
 
 export default function Home() {
-  const black = new BackgroundColor({
-    name: 'black',
-    colorKeys: ['#000000'],
-    colorspace: 'OKLCH',
-    ratios: [1, 3, 4.5, 6.6],
-  });
+  const [accentColors, setAccentColors] = useState<CssColor[]>(() => [
+    createRandomHexColor(),
+    createRandomHexColor(),
+  ]);
+
+  const randomiseColors = () => {
+    setAccentColors([createRandomHexColor(), createRandomHexColor()]);
+  };
 
   const accent = new Color({
     name: 'accent',
-    colorKeys: [
-      createRandomHexColor() as CssColor,
-      createRandomHexColor() as CssColor,
-    ], // TODO - make this random
+    colorKeys: accentColors,
     colorspace: 'OKLCH',
     // TODO - Once over 4.5, should switch to white
     ratios: [1.2, 2, 3, 4.5, 6, 7.5, 10, 12],
@@ -69,7 +78,7 @@ export default function Home() {
         <a>LinkedIn</a>
         <a>Digital Garden</a>
         <a>GitHub</a>
-        <button>Randomise colours</button>
+        <button onClick={randomiseColors}>Randomise colours</button>
       </main>
     </div>
   );
