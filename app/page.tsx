@@ -51,6 +51,7 @@ export default function Home() {
 
   const themeValues = theme?.contrastColors?.[1].values || [];
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const themeCss = themeValues.reduce((acc: any, colour: any) => {
     return {
       ...acc,
