@@ -4,8 +4,8 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  padding: var(--space500);
+  gap: var(--space500);
   font-family: var(--font-geist-sans);
 
   --radius100: 8px;
@@ -26,7 +26,7 @@
 
 .title {
   background-color: var(--accent100);
-  font-size: 7rem;
+  font-size: 4rem;
   width: max-content;
 
   background-image: linear-gradient(
@@ -51,8 +51,20 @@
   -webkit-text-fill-color: transparent;
 }
 
+@media (min-width: 720px) {
+  .page {
+    padding: 80px;
+    padding: 64px;
+  }
+
+  .title {
+    font-size: 7rem;
+  }
+}
+
 .pillContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space300);
 }
 
