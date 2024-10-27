@@ -1,0 +1,111 @@
+/* TODO - figure out main styling */
+.page {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  padding: var(--space500);
+  gap: var(--space500);
+  font-family: var(--font-geist-sans);
+
+  --radius100: 8px;
+  --radius200: 12px;
+
+  --space100: 4px;
+  --space200: 8px;
+  --space300: 12px;
+  --space400: 16px;
+  --space500: 32px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space500);
+}
+
+.title {
+  background-color: var(--accent100);
+  font-size: 4rem;
+  width: max-content;
+
+  background-image: linear-gradient(
+          45deg,
+          var(--accent100) 12.5%,
+          var(--accent200) 12.5%,
+          var(--accent200) 25%,
+          var(--accent300) 25%,
+          var(--accent300) 37.5%,
+          var(--accent400) 37.5%,
+          var(--accent400) 50%,
+          var(--accent500) 50%,
+          var(--accent500) 62.5%,
+          var(--accent600) 62.5%,
+          var(--accent600) 75%,
+          var(--accent700) 75%,
+          var(--accent700) 87.5%,
+          var(--accent800) 87.5%);
+
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 720px) {
+  .page {
+    padding: 80px;
+    padding: 64px;
+  }
+
+  .title {
+    font-size: 7rem;
+  }
+}
+
+.pillContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space300);
+}
+
+.pill {
+  background: var(--accent100);
+  color: var(--accent600);
+  border-radius: var(--radius200);
+  width: max-content;
+  padding: var(--space100) var(--space300);
+}
+
+.button {
+  background: var(--accent700);
+  color: var(--accent200);
+  border-radius: var(--radius100);
+  padding: var(--space200) var(--space300);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  &:hover {
+    background: var(--accent800);
+  }
+}
+
+.links {
+  list-style-type: none;
+}
+
+.link {
+  color: var(--accent100);
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-decoration-color: var(--accent400);
+  text-decoration-line: underline;
+
+  & + .link {
+    margin-top: var(--space200);
+  }
+
+  &:hover {
+    color: var(--accent200);
+  }
+}
