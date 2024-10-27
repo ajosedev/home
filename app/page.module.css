@@ -1,3 +1,4 @@
+/* TODO - figure out main styling */
 .page {
   display: grid;
   align-items: center;
@@ -6,34 +7,21 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+
+  --radius100: 8px;
+  --radius200: 12px;
+
+  --space100: 4px;
+  --space200: 8px;
+  --space300: 12px;
+  --space400: 16px;
+  --space500: 32px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
+  gap: var(--space500);
 }
 
 .title {
@@ -61,4 +49,51 @@
   background-size: 100%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.pillContainer {
+  display: flex;
+  gap: var(--space300);
+}
+
+.pill {
+  background: var(--accent100);
+  color: var(--accent600);
+  border-radius: var(--radius200);
+  width: max-content;
+  padding: var(--space100) var(--space300);
+}
+
+.button {
+  background: var(--accent700);
+  color: var(--accent200);
+  border-radius: var(--radius100);
+  padding: var(--space200) var(--space300);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  &:hover {
+    background: var(--accent800);
+  }
+}
+
+.links {
+  list-style-type: none;
+}
+
+.link {
+  color: var(--accent100);
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-decoration-color: var(--accent400);
+  text-decoration-line: underline;
+
+  & + .link {
+    margin-top: var(--space200);
+  }
+
+  &:hover {
+    color: var(--accent200);
+  }
 }

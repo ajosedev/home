@@ -22,8 +22,9 @@ const black = new BackgroundColor({
   ratios: [1, 3, 4.5, 6.6],
 });
 
+// TODO - sort hydration issues
+// TODO - validate that contrast ratio logic is correct
 export default function Home() {
-  // TODO - sort hydration issues
   const [accentColors, setAccentColors] = useState<CssColor[]>(() => [
     createRandomHexColor(),
     createRandomHexColor(),
@@ -37,7 +38,6 @@ export default function Home() {
     name: 'accent',
     colorKeys: accentColors,
     colorspace: 'OKLCH',
-    // TODO - Once over 4.5, should switch to white
     ratios: [1.2, 2, 3, 4.5, 6, 7.5, 10, 12],
   });
 
@@ -47,8 +47,7 @@ export default function Home() {
     lightness: 100,
   });
 
-  // returns theme colors as JSON
-  const colors = theme.contrastColors;
+  // const colors = theme.contrastColors;
 
   const themeValues = theme?.contrastColors?.[1].values || [];
 
@@ -59,20 +58,32 @@ export default function Home() {
     };
   }, {});
 
-  // TODO - style this into design system-y things, showing off the accent colours
+  // TODO - add sliders for as many things as possible and use them to change tokens
   return (
     <div className={styles.page} style={themeCss}>
       <main className={styles.main}>
         <h1 className={styles.title}>ajosedev</h1>
-        <div className="pill">Software Engineer</div>
-        <div className="pill">Frontend</div>
-        <div className="pill">Design Systems</div>
+        <div className={styles.pillContainer}>
+          <span className={styles.pill}>Frontend</span>
+          <span className={styles.pill}>Design Systems</span>
+          <span className={styles.pill}>Software Engineer</span>
+        </div>
         {/*TODO - find a nice way of displaying these somewhere*/}
-        <p>{JSON.stringify(colors)}</p>
-        <a>LinkedIn</a>
-        <a>Digital Garden</a>
-        <a>GitHub</a>
-        <button onClick={randomiseColors}>Randomise colours</button>
+        {/*<p>{JSON.stringify(colors)}</p>*/}
+        <ul className={styles.links}>
+          <li className={styles.link}>
+            <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
+          </li>
+          <li className={styles.link}>
+            <a href="https://garden.ajose.dev/">Digital Garden</a>
+          </li>
+          <li className={styles.link}>
+            <a href="https://github.com/ajosedev">GitHub</a>
+          </li>
+        </ul>
+        <button className={styles.button} onClick={randomiseColors}>
+          Randomise colours
+        </button>
       </main>
     </div>
   );
