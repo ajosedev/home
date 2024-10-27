@@ -8,8 +8,6 @@ Mostly a hub page for links.
 
 Most of the stuff I write is here instead: https://github.com/ajosedev/knowledge
 
-Photo by [Soroush golpoor](https://unsplash.com/@soroushgolpoor)
-
 ## Development
 
 ```bash
