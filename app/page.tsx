@@ -63,16 +63,7 @@ export default function Home() {
   return (
     <div className={styles.page} style={themeCss}>
       <main className={styles.main}>
-        <h1 className={styles.title} aria-label="ajosedev">
-          <span aria-hidden="true">a</span>
-          <span aria-hidden="true">j</span>
-          <span aria-hidden="true">o</span>
-          <span aria-hidden="true">s</span>
-          <span aria-hidden="true">e</span>
-          <span aria-hidden="true">d</span>
-          <span aria-hidden="true">e</span>
-          <span aria-hidden="true">v</span>
-        </h1>
+        <h1 className={styles.title}>ajosedev</h1>
         <div className="pill">Software Engineer</div>
         <div className="pill">Frontend</div>
         <div className="pill">Design Systems</div>
