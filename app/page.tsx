@@ -14,6 +14,7 @@ import {
   Link,
   Pill,
   PillContainer,
+  Slider,
 } from '@/app/components';
 
 const createRandomHexColor = () => {
@@ -36,6 +37,9 @@ export default function Home() {
     createRandomHexColor(),
     createRandomHexColor(),
   ]);
+  const [contrast, setContrast] = useState<number>(1);
+  const [saturation, setSaturation] = useState<number>(100);
+  const [lightness, setLightness] = useState<number>(100);
 
   const randomiseColors = () => {
     setAccentColors([createRandomHexColor(), createRandomHexColor()]);
@@ -51,7 +55,9 @@ export default function Home() {
   const theme = new Theme({
     colors: [accent],
     backgroundColor: black,
-    lightness: 100,
+    lightness,
+    contrast,
+    saturation,
   });
 
   // const colors = theme.contrastColors;
@@ -76,8 +82,6 @@ export default function Home() {
           <Pill>Design Systems</Pill>
           <Pill>Software Engineer</Pill>
         </PillContainer>
-        {/*TODO - find a nice way of displaying these somewhere*/}
-        {/*<p>{JSON.stringify(colors)}</p>*/}
         <ul className={styles.links}>
           <Link href="https://www.linkedin.com/in/ajosedev/">LinkedIn</Link>
           <Link href="https://garden.ajose.dev/">Digital Garden</Link>
@@ -89,6 +93,36 @@ export default function Home() {
             <ColorSwatch color={accentColors[1]} />
           </div>
           <Button onClick={randomiseColors}>Randomise colours</Button>
+          <Slider
+            id="contrast"
+            min={0}
+            max={2}
+            onChange={(e) => setContrast(e.target.value as unknown as number)}
+            value={contrast}
+            step={0.2}
+          >
+            Contrast: {contrast}
+          </Slider>
+          <Slider
+            id="saturation"
+            min={0}
+            max={100}
+            onChange={(e) => setSaturation(e.target.value as unknown as number)}
+            value={saturation}
+            step={5}
+          >
+            Saturation: {saturation}
+          </Slider>
+          <Slider
+            id="lightness"
+            min={0}
+            max={100}
+            onChange={(e) => setLightness(e.target.value as unknown as number)}
+            value={lightness}
+            step={5}
+          >
+            Lightness: {lightness}
+          </Slider>
         </div>
       </main>
     </div>

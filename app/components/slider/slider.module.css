@@ -1,0 +1,6 @@
+.slider {
+  display: flex;
+  gap: var(--space300);
+  align-items: center;
+  accent-color: var(--accent500);
+}
