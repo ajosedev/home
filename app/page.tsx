@@ -89,8 +89,24 @@ export default function Home() {
         </ul>
         <div className={styles.footer}>
           <div className={styles.colorSwatches}>
-            <ColorSwatch color={accentColors[0]} />
-            <ColorSwatch color={accentColors[1]} />
+            <ColorSwatch
+              onChange={(e) =>
+                setAccentColors((currentColors) => [
+                  e.target.value as CssColor,
+                  currentColors[1],
+                ])
+              }
+              value={accentColors[0]}
+            />
+            <ColorSwatch
+              onChange={(e) =>
+                setAccentColors((currentColors) => [
+                  currentColors[0],
+                  e.target.value as CssColor,
+                ])
+              }
+              value={accentColors[1]}
+            />
           </div>
           <Button onClick={randomiseColors}>Randomise colours</Button>
           <Slider
