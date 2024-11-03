@@ -62,50 +62,6 @@
   }
 }
 
-.pillContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space300);
-}
-
-.pill {
-  background: var(--accent100);
-  color: var(--accent600);
-  border-radius: var(--radius200);
-  width: max-content;
-  padding: var(--space100) var(--space300);
-}
-
-.button {
-  background: var(--accent700);
-  color: var(--accent200);
-  border-radius: var(--radius100);
-  padding: var(--space200) var(--space300);
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-
-  &:hover {
-    background: var(--accent800);
-  }
-}
-
 .links {
   list-style-type: none;
-}
-
-.link {
-  color: var(--accent100);
-  cursor: pointer;
-  font-size: 1.4rem;
-  text-decoration-color: var(--accent400);
-  text-decoration-line: underline;
-
-  & + .link {
-    margin-top: var(--space200);
-  }
-
-  &:hover {
-    color: var(--accent200);
-  }
 }

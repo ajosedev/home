@@ -8,6 +8,7 @@ import {
 } from '@adobe/leonardo-contrast-colors';
 import { useState } from 'react';
 import styles from './page.module.css';
+import { Button, Link, Pill, PillContainer } from '@/app/components';
 
 const createRandomHexColor = () => {
   return '#000000'.replace(/0/g, function () {
@@ -64,27 +65,19 @@ export default function Home() {
     <div className={styles.page} style={themeCss}>
       <main className={styles.main}>
         <h1 className={styles.title}>ajosedev</h1>
-        <div className={styles.pillContainer}>
-          <span className={styles.pill}>Frontend</span>
-          <span className={styles.pill}>Design Systems</span>
-          <span className={styles.pill}>Software Engineer</span>
-        </div>
+        <PillContainer>
+          <Pill>Frontend</Pill>
+          <Pill>Design Systems</Pill>
+          <Pill>Software Engineer</Pill>
+        </PillContainer>
         {/*TODO - find a nice way of displaying these somewhere*/}
         {/*<p>{JSON.stringify(colors)}</p>*/}
         <ul className={styles.links}>
-          <li className={styles.link}>
-            <a href="https://www.linkedin.com/in/ajosedev/">LinkedIn</a>
-          </li>
-          <li className={styles.link}>
-            <a href="https://garden.ajose.dev/">Digital Garden</a>
-          </li>
-          <li className={styles.link}>
-            <a href="https://github.com/ajosedev">GitHub</a>
-          </li>
+          <Link href="https://www.linkedin.com/in/ajosedev/">LinkedIn</Link>
+          <Link href="https://garden.ajose.dev/">Digital Garden</Link>
+          <Link href="https://github.com/ajosedev">GitHub</Link>
         </ul>
-        <button className={styles.button} onClick={randomiseColors}>
-          Randomise colours
-        </button>
+        <Button onClick={randomiseColors}>Randomise colours</Button>
       </main>
     </div>
   );
