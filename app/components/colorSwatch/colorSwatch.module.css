@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  gap: var(--space100);
+  align-items: center;
+  color: var(--accent100);
+}
+
+.preview {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}

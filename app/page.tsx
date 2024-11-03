@@ -8,7 +8,13 @@ import {
 } from '@adobe/leonardo-contrast-colors';
 import { useState } from 'react';
 import styles from './page.module.css';
-import { Button, Link, Pill, PillContainer } from '@/app/components';
+import {
+  Button,
+  ColorSwatch,
+  Link,
+  Pill,
+  PillContainer,
+} from '@/app/components';
 
 const createRandomHexColor = () => {
   return '#000000'.replace(/0/g, function () {
@@ -77,7 +83,13 @@ export default function Home() {
           <Link href="https://garden.ajose.dev/">Digital Garden</Link>
           <Link href="https://github.com/ajosedev">GitHub</Link>
         </ul>
-        <Button onClick={randomiseColors}>Randomise colours</Button>
+        <div className={styles.footer}>
+          <div className={styles.colorSwatches}>
+            <ColorSwatch color={accentColors[0]} />
+            <ColorSwatch color={accentColors[1]} />
+          </div>
+          <Button onClick={randomiseColors}>Randomise colours</Button>
+        </div>
       </main>
     </div>
   );
