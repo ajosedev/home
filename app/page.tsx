@@ -84,7 +84,6 @@ export default function Home() {
         </PillContainer>
         <ul className={styles.links}>
           <Link href="https://www.linkedin.com/in/ajosedev/">LinkedIn</Link>
-          <Link href="https://garden.ajose.dev/">Digital Garden</Link>
           <Link href="https://github.com/ajosedev">GitHub</Link>
         </ul>
         <div className={styles.footer}>
